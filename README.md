@@ -12,6 +12,7 @@ from djangounchained_flash import ErrorManager, getFromSession
 ******INITIALIZE******
 
 def index(request):
+
     if 'flash' not in request.session:
 	request.session['flash']=ErrorManager().addToSession()
     e=getFromSession(request.session['flash'])
@@ -28,8 +29,11 @@ def index(request):
 ******ADDING TO FLASH MESSAGES******
 
 e=getFromSession(request.session['flash'])
+
 e.addMessage('Name cannot be empty', 'name')
+
 e.addMessage('Email address invalid', 'email')
+
 request.session['flash']=e.addToSession()
 
 ******INCLUDED FUNCTIONS******
