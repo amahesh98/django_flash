@@ -1,4 +1,6 @@
-*********** READ THROUGH COMPLETELY BEFORE STARTING ***********
+<h1>Django Unchained - Flash</h1>
+
+******READ THROUGH COMPLETELY BEFORE STARTING******
 
 STEP 1) In terminal, run the command:
 
