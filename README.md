@@ -5,7 +5,7 @@ STEP 1) In terminal, run the command:
 pip install jsonpickle
 
 STEP 2) In views.py:
-from djangounchained_flash import ErrorManager, ErrorMessage, getFromSession
+from djangounchained_flash import ErrorManager, getFromSession
 
 ******INITIALIZE********
 def index(request):
