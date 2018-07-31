@@ -9,7 +9,8 @@ pip install jsonpickle
 STEP 2) In views.py:
 from djangounchained_flash import ErrorManager, getFromSession
 
-******INITIALIZE********
+******INITIALIZE******
+
 def index(request):
     if 'flash' not in request.session:
 	request.session['flash']=ErrorManager().addToSession()
@@ -24,7 +25,8 @@ def index(request):
     context['name_errors']=name_errors
     context['description_errors']=description_errors
     
-******ADDING TO FLASH MESSAGES*******
+******ADDING TO FLASH MESSAGES******
+
 e=getFromSession(request.session['flash'])
 e.addMessage('Name cannot be empty', 'name')
 e.addMessage('Email address invalid', 'email')
@@ -42,8 +44,6 @@ ErrorManager.getMessages(tag=optional)
 ******IMPORTANT NOTES********
 
 Anytime you want to modify or save the ErrorManager, between session and normal code, you must convert between getFromSession() and addToSession()
-
-(I tried, Django doesn't seem to allow for an easier way)
 
 *Adding to request.session
     request.session['flash']=<instance of ErrorManager>.addToSession()
