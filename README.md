@@ -38,11 +38,11 @@ request.session['flash']=e.addToSession()
 
 ******INCLUDED FUNCTIONS******
 
-ErrorManager.addMessage(message, tag=optional)
-    --pass in a string and a tag parameter for easy access
-ErrorManager.getMessages(tag=optional)
-    --get all messages, or only the messages with the passed in tag
-    --Will return a list of strings
+ErrorManager.addMessage(message, tag=optional)<br>
+    --pass in a string and a tag parameter for easy access<br>
+ErrorManager.getMessages(tag=optional)<br>
+    --get all messages, or only the messages with the passed in tag<br>
+    --Will return a list of strings<br>
     --Messages will be shown once, then removed from ErrorManager
 
 ******IMPORTANT NOTES********
